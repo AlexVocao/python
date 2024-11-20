@@ -1,3 +1,4 @@
+import time
 from turtle import Turtle
 import random
 
@@ -9,7 +10,7 @@ DOWN = 270
 LEFT = 180
 RIGHT = 0
 
-directions = {RIGHT: LEFT, UP: DOWN, LEFT: RIGHT, DOWN: RIGHT}
+directions = {RIGHT: LEFT, UP: DOWN, LEFT: RIGHT, DOWN: UP}
 
 DISTANCE_STEP = 20
 
@@ -62,3 +63,4 @@ class Snake:
         new_segment.color(random.random(), random.random(), random.random())
         new_segment.goto(self.segments[-1].xcor(), self.segments[-1].ycor())
         self.segments.append(new_segment)
+
